@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  clone:
+  job_one:
     name: Clone
     runs-on: ubuntu-latest
     steps:
-      - name: testing
+      - name: clone
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
