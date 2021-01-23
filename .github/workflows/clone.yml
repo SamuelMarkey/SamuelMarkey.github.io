@@ -1,0 +1,17 @@
+name: clone workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clone:
+    name: Clone
+    # might need to define container
+    runs-on: ubuntu-latest
+    steps:
+        # need to figure out uses
+      - uses: actions/checkout@v2
+        
+      - name: clone
+        run : |
+          git clone
