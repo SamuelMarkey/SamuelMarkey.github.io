@@ -17,4 +17,4 @@ jobs:
           port: ${{ secrets.PORT }}
           # may need some directory working here:  
           script: |
-             git clone 
+             ls
