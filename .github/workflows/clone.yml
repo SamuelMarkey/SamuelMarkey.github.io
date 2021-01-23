@@ -8,7 +8,7 @@ jobs:
     name: Clone
     runs-on: ubuntu-latest
     steps:
-      - name: testing
+      - name: clone
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -17,4 +17,4 @@ jobs:
           port: ${{ secrets.PORT }}
           # may need some directory working here:  
           script: |
-             git clone https://github.com/SamuelMarkey/SamuelMarkey.github.io
+             git clone 
