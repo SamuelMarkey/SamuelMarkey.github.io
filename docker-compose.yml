@@ -7,8 +7,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      restart: unless-stopped
     image: sam
+    restart: unless-stopped
     networks:
       - app-network
   
