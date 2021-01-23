@@ -6,12 +6,15 @@ on:
 jobs:
   clone:
     name: Clone
-    # might need to define container
     runs-on: ubuntu-latest
     steps:
-        # need to figure out uses
-      - uses: actions/checkout@v2
-        
-      - name: clone
-        run : |
-          git clone
+      - name: testing
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          # may need some directory working here:  
+          script: |
+             git clone https://github.com/SamuelMarkey/SamuelMarkey.github.io
