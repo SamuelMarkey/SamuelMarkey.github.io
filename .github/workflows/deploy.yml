@@ -3,7 +3,7 @@ name: deployment workflow
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
     
 jobs:
   deploy:
