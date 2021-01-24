@@ -1,10 +1,8 @@
 name: clone workflow
-
 on:
   workflow_dispatch:
-
 jobs:
-  clone:
+  job_one:
     name: Clone
     runs-on: ubuntu-latest
     steps:
@@ -15,6 +13,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          # may need some directory working here:  
           script: |
-             git clone https://github.com/SamuelMarkey/SamuelMarkey.github.io
+            cd ../pub
+            git clone https://github.com/SamuelMarkey/SamuelMarkey.github.io.git
+            
